@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato e Referências </title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/calc.css">
 </head>
 <body>
     <header class="hero" role="banner">
@@ -62,6 +63,127 @@
             </ol>
         </section>
 
+
+
+
+
+
+
+
+        <section class="calculator-section">
+            <div class="card">
+                <h2 class="section-title">Simulador do Aferidor Inteligente</h2>
+                <p>Teste virtualmente as funcionalidades do aferidor e calibre os parâmetros do seu veículo.</p>
+                
+                <div class="calculator-container">
+                    <!-- Modo de Operação -->
+                    <div class="calc-mode-selector">
+                        <h3>Modo de Operação</h3>
+                        <div class="mode-buttons">
+                            <button class="mode-btn active" data-mode="standard">Modo Padrão</button>
+                            <button class="mode-btn" data-mode="analytical">Modo Analítico</button>
+                        </div>
+                    </div>
+
+                    <!-- Display Simulado -->
+                    <div class="display-simulator">
+                        <div class="oled-display">
+                            <div class="display-content">
+                                <div class="display-line" id="line1">Aferidor Inteligente</div>
+                                <div class="display-line" id="line2">Modo: Padrão</div>
+                                <div class="display-line" id="line3">Pressione para medir</div>
+                                <div class="display-line" id="line4">---</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botões de Controle -->
+                    <div class="button-simulator">
+                        <div class="simulator-buttons">
+                            <button class="sim-btn btn-up" data-action="up">▲ UP</button>
+                            <button class="sim-btn btn-down" data-action="down">▼ DOWN</button>
+                            <button class="sim-btn btn-confirm" data-action="confirm">OK</button>
+                            <button class="sim-btn btn-double" data-action="double">DUPLO</button>
+                        </div>
+                    </div>
+
+                    <!-- Configurações do Veículo (Modo Analítico) -->
+                    <div class="vehicle-config" id="vehicleConfig" style="display: none;">
+                        <h3>Configurações do Veículo</h3>
+                        <div class="config-grid">
+                            <div class="config-item">
+                                <label for="vehicleType">Tipo de Veículo:</label>
+                                <select id="vehicleType">
+                                    <option value="car">Carro de Passeio</option>
+                                    <option value="suv">SUV/4x4</option>
+                                    <option value="motorcycle">Moto</option>
+                                    <option value="bike">Bicicleta</option>
+                                </select>
+                            </div>
+                            
+                            <div class="config-item">
+                                <label for="tireType">Tipo de Pneu:</label>
+                                <select id="tireType">
+                                    <option value="radial">Radial</option>
+                                    <option value="diagonal">Diagonal</option>
+                                    <option value="tubeless">Tubeless</option>
+                                    <option value="tube">Com Câmara</option>
+                                </select>
+                            </div>
+                            
+                            <div class="config-item">
+                                <label for="load">Carga (kg):</label>
+                                <input type="number" id="load" min="0" max="1000" value="300">
+                            </div>
+                            
+                            <div class="config-item">
+                                <label for="temperature">Temperatura (°C):</label>
+                                <input type="number" id="temperature" min="-10" max="50" value="25">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resultados da Simulação -->
+                    <div class="simulation-results">
+                        <h3>Resultado da Medição</h3>
+                        <div class="results-grid">
+                            <div class="result-item">
+                                <span class="result-label">Pressão do Pneu:</span>
+                                <span class="result-value" id="resultPressure">--</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Pressão Atmosférica:</span>
+                                <span class="result-value" id="resultAtmospheric">--</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Temperatura:</span>
+                                <span class="result-value" id="resultTemperature">--</span>
+                            </div>
+                            <div class="result-item recommendation">
+                                <span class="result-label">Recomendação:</span>
+                                <span class="result-value" id="resultRecommendation">--</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Histórico de Leituras -->
+                    <div class="reading-history">
+                        <h3>Últimas Leituras</h3>
+                        <div class="history-list" id="historyList">
+                            <!-- Histórico será gerado via JavaScript -->
+                        </div>
+                        <button class="btn-clear" id="clearHistory">Limpar Histórico</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
         <section class="button-container mt-1">
             <a href="prototipo.html" class="btn-primary" >Ir para Protótipo & Código</a>
             <a href="index.html" class="btn-secondary" >Voltar à Home</a>
@@ -79,4 +201,5 @@
         </div>
     </footer>
 </body>
+<script src="assets/js/calc.js"></script>
 </html>
