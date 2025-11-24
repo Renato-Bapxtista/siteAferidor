@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aferidor Inteligente de Pneus — Início</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="hero" role="banner">
+        <h1>Aferidor Inteligente de Pneus</h1>
+        <h2>Projeto acadêmico integrado</h2>
+        <p>Segurança, economia e tecnologia embarcadas em um equipamento portátil — projeto acadêmico integrado com ESP32 e sensores digitais.</p>       
+    </header>
+
+    <nav>
+        <a class="active_page" href="index.html">Início</a>
+        <a href="projeto.html">Projeto</a>
+        <a href="prototipo.html">Protótipo</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <main>
+
+        <section>
+            <div class="card">
+                <div class="video-container">
+                    <iframe               
+                        src="https://www.youtube.com/embed/ouvV6vTWldY?si=V6Ce13YASlI4V8dG" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="section-title">Contexto e importância</h2>
+                <p>
+                A aferição correta da pressão dos pneus é uma medida preventiva essencial para garantir segurança veicular, eficiência energética e conservação dos pneus. Pneus fora das recomendações de fábrica afetam diretamente a dirigibilidade, aumentam o consumo de combustível e aceleram o desgaste. A literatura e relatórios técnicos mostram que a aferição periódica é uma prática subutilizada entre condutores apesar dos benefícios econômicos e de segurança.
+                </p>
+
+                <div class="grid mt-1">
+                <div class="card">
+                    <div class="stat-container">
+                        <div>
+                            <div class="stat-label">Acidentes relacionados a falha mecânica*</div>
+                            <div class="stat">~30%</div>
+                        </div>
+                        <div class="stat-source">fonte: relatórios técnicos de trânsito</div>
+                    </div>
+                    <p class="stat-description">Pneus são frequentemente citados em análises de causas de acidentes; manutenção preventiva ajuda a mitigar risco.</p>
+                </div>
+
+                <div class="card">
+                    <div class="stat-container">
+                    <div>
+                        <div class="stat-label">Economia de combustível</div>
+                        <div class="stat">até 10%</div>
+                    </div>
+                    <div class="stat-source">fonte: estudos sobre eficiência veicular</div>
+                    </div>
+                    <p class="stat-description">Pneus calibrados reduzem a resistência ao rolamento, gerando menor consumo.</p>
+                </div>
+
+                <div class="card">
+                    <div class="stat-container">
+                    <div>
+                        <div class="stat-label">Vida útil do pneu</div>
+                        <div class="stat">+25%</div>
+                    </div>
+                    <div class="stat-source">fonte: fabricantes de pneus</div>
+                    </div>
+                    <p class="stat-description">Calibragem adequada reduz desgaste irregular e aumenta distância útil percorrida.</p>
+                </div>
+                </div>
+
+                <div class="callout">
+                <strong>Nota:</strong> Percentuais e afirmações são usados aqui com base em documentos técnicos e manuais de fabricantes. Estes números são exemplos representativos para justificar a relevância do dispositivo. Para citações formais, consulte as <a href="contato.html">referências</a>.
+                </div>
+            </div>
+
+            <div class="card mt-1">
+                <h2 class="section-title">O que é o Aferidor Inteligente?</h2>
+                <p>
+                Trata-se de um dispositivo portátil, baseado em um microcontrolador ESP32, que integra:
+                </p>
+                <ul>
+                <li>Sensor BMP280 — para leitura da pressão atmosférica e temperatura ambiente;</li>
+                <li>Sensor SMP3011 — sensor dedicado à leitura da pressão do pneu;</li>
+                <li>Display OLED SSD1306 — para exibição clara das leituras e menus;</li>
+                <li>Três botões físicos — navegação (Up/Down) e confirmação/duplo-clique para alternância de modo.</li>
+                </ul>
+
+                <div class="figure">
+                    <img src="assets/images/modelo_criativo.png" alt="Ilustração - aferição de pneu - modelo criativo">
+                    <figcaption>
+                        <strong>Figura 1 —</strong> Modelo Criativo do Projeto. O projeto aqui apresentado busca agregar análise inteligente ao dispositivo
+                        tradicional, sem depender de aplicativos externos.
+                    </figcaption>
+                </div>
+            </div>
+
+            <div class="card mt-1">
+                <h2 class="section-title">Funcionalidades chave</h2>
+                <div class="figure">
+                    <img src="assets/images/modelo3d.png" alt="Ilustração - aferição de pneu - modelo 3D">
+                    <figcaption>
+                        <strong>Figura 2 </strong> 
+                        <ol>
+                            <li><strong>Modo Padrão:</strong> Leitura contínua e exibição imediata da pressão do pneu, pressão atmosférica e temperatura.</li>
+                            <li><strong>Modo Analítico:</strong> Interface guiada para entrada de parâmetros (tipo de veículo, tipo de pneu, carga) e sugestão automática de calibragem.</li>
+                            <li><strong>Controle local:</strong> Toda a operação é feita pelos 3 botões — não depende de smartphone.</li>
+                            <li><strong>Baixo consumo e portabilidade:</strong> Projeto pensado para uso em campo, com bateria recarregável via USB.</li>
+                        </ol>
+                    </figcaption>
+                </div>          
+
+                <div class="mt-1">
+                <h3 class="table-title">Tabela rápida - Unidade de medidas</h3>
+                <table>
+                    <thead>
+                    <tr><th>Unidade</th><th>Símbolo</th><th>Conversão aproximada</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td class="left">Libra por polegada quadrada</td><td>psi</td><td>1 psi ≈ 0,06895 bar</td></tr>
+                    <tr><td class="left">Bar</td><td>bar</td><td>1 bar = 100 kPa ≈ 14,5038 psi</td></tr>
+                    <tr><td class="left">Kilopascal</td><td>kPa</td><td>1 kPa = 0,01 bar ≈ 0,145038 psi</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <div class="card mt-1">
+                <h2 class="section-title">Vantagens do aparelho proposto</h2>
+                <div class="figure">
+                    <img src="assets/images/modelo_diversas_vistas.png" alt="Ilustração - aferição de pneu - modelo criativo">
+                    <figcaption>
+                        <strong>Figura 3 —</strong> Vistas diversas do projeto. O projeto visa preencher uma lacuna do mercado: equipamentos com boa precisão, análise local (sem app) e custo acessível.
+                    </figcaption>
+                </div>
+               
+                <ul>
+                <li>Operação offline e independente;</li>
+                <li>Interface direta para usuários com pouca familiaridade tecnológica;</li>
+                <li>Possibilidade de expansão futura (Bluetooth/Wi-Fi) sem reengenharia do hardware;</li>
+                <li>Design modular para fácil manutenção e atualização de sensores.</li>
+                </ul>
+            </div>
+
+            <div class="button-container mt-1">
+                <div class="flex-item card">
+                <h3 class="card-title">Como usar (resumo rápido)</h3>
+                <ol>
+                    <li>Conecte a ponta do bico do aferidor à válvula Schrader do pneu;</li>
+                    <li>Modo inicial: o aparelho liga em <em>Modo Padrão</em> e mostra a pressão;</li>
+                    <li>Para modo analítico: dê <strong>duplo clique</strong> no botão 3 e siga as instruções na tela;</li>
+                    <li>Utilize BTN1/BTN2 para navegar nas opções e BTN3 para confirmar.</li>
+                </ol>
+                </div>
+
+    <div class="flex-item card">
+                <h3 class="card-title">Próximos passos</h3>       <ul>
+                    <li>Testes de campo para validação e calibração frente a medidores profissionais;</li>
+                    <li>Documentação detalhada do circuito e firmware;</li>
+                    <li>Construção de uma versão com caixa impressa em 3D e estojo de transporte.</li>
+                </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="button-container mt-1">
+            <a href="prototipo.html" class="btn-primary" >Ir para Protótipo & Código</a>
+            <a href="projeto.html" class="btn-secondary" >Ir para o Projeto</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div>
+                <strong>Projeto:</strong> Aferidor Inteligente de Pneus — Trabalho de Limguagem de programação para microcontroladores (2025)
+                </div>
+                <div class="footer-note"> Faculdade de Tecnologia de Jundiaí.</div>
+            </div>        
+        </div>
+    </footer>
+    
+</body>
+</html>

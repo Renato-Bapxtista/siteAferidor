@@ -1,0 +1,315 @@
+/* ====== Reset e Base ====== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ====== Header & Hero ====== */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  background: #1e3d58;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+header h2 {
+  color: #ccc;
+}
+.hero {
+  background: linear-gradient(90deg, #1e3d58 0%, #27496d 100%);
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.4rem;
+  margin: 0 0 .5rem 0;
+}
+.hero p {
+  margin: 0;
+  font-size: 1.05rem;
+  opacity: .95;
+}
+
+/* ====== Navegação ====== */
+nav {
+  background: #27496d;
+  padding: .8rem;
+  text-align: center;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.active_page{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: red;
+}
+/* ====== Vídeo Responsivo ====== */
+.video-container {  
+  width: 915px; 
+  height: 515px; 
+  overflow: hidden;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  border: #1e87d1 6px solid;
+  background: #000;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ====== Layout ====== */
+section {
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+.mt-1 { margin-top: 1rem; }
+.mt-0-6 { margin-top: .6rem; }
+.mt-0-8 { margin-top: .8rem; }
+
+/* ====== Cards & Containers ====== */
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(30,61,88,0.08);
+  margin-bottom: 1.2rem;
+}
+.card-title { margin: 0; color: #1e3d58; }
+.section-title { color: #1e3d58; margin-top: 0; }
+.flex-item { flex: 1; min-width: 260px; }
+.flex-item-small { flex: 1; min-width: 220px; }
+
+/* ====== Botões ====== */
+.button-container {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: #1e3d58;
+  color: #fff;
+  padding: .9rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+}
+.btn-primary:hover { background: #27496d; }
+.btn-secondary {
+  background: #fff;
+  border: 1px solid #1e3d58;
+  color: #1e3d58;
+  padding: .9rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ====== Componentes ====== */
+.callout {
+  background: #eaf4ff;
+  border-left: 6px solid #1e87d1;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+.callout li{
+    padding:2px;   
+}
+.note {
+  background: #fff8e6;
+  border-left: 6px solid #f1c40f;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+.figure {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.figure img {
+  max-width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.figure figcaption {
+  max-width: 600px;
+  color: #444;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.gallery img {
+  max-width: 500px;
+  min-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ====== Tabelas ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background: #1e3d58;
+  color: white;
+}
+td.left { text-align: left; padding-left: 1rem; }
+.table-title { margin: 0 0 .4rem 0; color: #1e3d58; }
+table.specs th, table.specs td { padding: 8px; }
+
+/* ====== Texto auxiliar ====== */
+.stat { font-size: 1.6rem; color: #1e3d58; font-weight: 700; }
+.stat-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stat-label { font-size: .9rem; color: #666; }
+.stat-source { font-size: .75rem; color: #888; text-align: right; }
+.stat-description { margin-top: .6rem; color: #444; font-size: .95rem; }
+.small { font-size: .9rem; color: #666; }
+
+/* ====== Código e Diagramas ====== */
+pre.code, .code-block {
+  background: #0b1220;
+  color: #d6f8ff;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow: auto;
+  font-size: .9rem;
+}
+.code-block-large {
+  background: #f7f7f7;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.diagram {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.04);
+  margin-top: 1rem;
+}
+.diagram-title { margin-top: 0; color: #1e3d58; }
+.diagram-pre { font-size: .95rem; margin: 0; }
+.diagram-caption { margin: .6rem 0 0 0; }
+
+/* ====== Formulário ====== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+input, textarea {
+  padding: .7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+button {
+  background: #1e3d58;
+  color: #fff;
+  padding: .8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+button:hover { background: #27496d; }
+ol li { margin-bottom: .6rem; }
+
+/* ====== Footer ====== */
+footer {
+  background: #1e3d58;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.footer-container a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .8rem;
+}
+.footer-note {
+  font-size: .9rem;
+  opacity: .95;
+}
+
+
+/* ====== Responsividade ====== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.6rem; }
+  .hero p { font-size: .95rem; }
+}
