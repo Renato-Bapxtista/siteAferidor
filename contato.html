@@ -23,59 +23,57 @@
     
     <main>
 
-          <section class="card">
-            <section class="calculator-section">
-                <div class="card">
-                    <h2 class="section-title">Simulador do Aferidor Inteligente</h2>
-                    <p>Experimente o aferidor como se estivesse usando o dispositivo real. Todas as funcionalidades estão no display abaixo.</p>
-                    
-                    <div class="calculator-container">
-                        <!-- Display OLED Principal -->
-                        <div class="display-simulator">
-                            <div class="oled-display">
-                                <div class="display-content">
-                                    <div class="display-line" id="line1">MENU PRINCIPAL</div>
-                                    <div class="display-line" id="line2">1/6</div>
-                                    <div class="display-line" id="line3">&gt; Fazer Medição</div>
-                                    <div class="display-line" id="line4">[OK] Selecionar</div>
-                                </div>
-                            </div>
-                            
-                            <!-- Status Bar -->
-                            <div class="status-bar">
-                                <span class="status-item" id="batteryStatus">🔋 82%</span>
-                                <span class="status-item" id="modeStatus">📊 Menu</span>
-                                <span class="status-item" id="timeStatus">🕒 12:07</span>
+          <section class="card calculatorsection">            
+            <div class="card">
+                <h2 class="section-title">Simulador do Aferidor Inteligente</h2>
+                <p>Experimente o aferidor como se estivesse usando o dispositivo real. Todas as funcionalidades estão no display abaixo.</p>
+                
+                <div class="calculator-container">
+                    <!-- Display OLED Principal -->
+                    <div class="display-simulator">
+                        <div class="oled-display">
+                            <div class="display-content">
+                                <div class="display-line" id="line1">MENU PRINCIPAL</div>
+                                <div class="display-line" id="line2">1/6</div>
+                                <div class="display-line" id="line3">&gt; Fazer Medição</div>
+                                <div class="display-line" id="line4">[OK] Selecionar</div>
                             </div>
                         </div>
+                        
+                        <!-- Status Bar -->
+                        <div class="status-bar">
+                            <span class="status-item" id="batteryStatus">🔋 82%</span>
+                            <span class="status-item" id="modeStatus">📊 Menu</span>
+                            <span class="status-item" id="timeStatus">🕒 12:07</span>
+                        </div>
+                    </div>
 
-                        <!-- Botões de Controle - LAYOUT CORRETO -->
-                        <div class="button-simulator">
-                            <div class="simulator-buttons">
-                                <button class="sim-btn btn-up" data-action="up">
-                                    <span class="btn-icon">▲</span>
-                                    <span class="btn-label">UP</span>
-                                </button>
-                                <button class="sim-btn btn-down" data-action="down">
-                                    <span class="btn-icon">▼</span>
-                                    <span class="btn-label">DOWN</span>
-                                </button>
-                                <button class="sim-btn btn-confirm" data-action="confirm">
-                                    <span class="btn-icon">●</span>
-                                    <span class="btn-label">OK</span>
-                                </button>
-                            </div>
-                            <div class="button-help">
-                                <p><strong>BTN1 (UP):</strong> Navega para cima | <strong>BTN2 (DOWN):</strong> Navega para baixo | <strong>BTN3 (OK):</strong> Confirma/Duplo-clique muda modo</p>
-                            </div>
+                    <!-- Botões de Controle - LAYOUT CORRETO -->
+                    <div class="button-simulator">
+                        <div class="simulator-buttons">
+                            <button class="sim-btn btn-up" data-action="up">
+                                <span class="btn-icon">▲</span>
+                                <span class="btn-label">UP</span>
+                            </button>
+                            <button class="sim-btn btn-down" data-action="down">
+                                <span class="btn-icon">▼</span>
+                                <span class="btn-label">DOWN</span>
+                            </button>
+                            <button class="sim-btn btn-confirm" data-action="confirm">
+                                <span class="btn-icon">●</span>
+                                <span class="btn-label">OK</span>
+                            </button>
+                        </div>
+                        <div class="button-help">
+                            <p><strong>BTN1 (UP):</strong> Navega para cima | <strong>BTN2 (DOWN):</strong> Navega para baixo | <strong>BTN3 (OK):</strong> Confirma/Duplo-clique muda modo</p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>            
         </section>
        <section class="card">
             <h2 class="section-title">Identificação do Projeto</h2>
-            <p><strong>Título:</strong> Aferidor Inteligente de Pneus</p>            
+            <p><strong>Título:</strong> <a href="https://github.com/Renato-Bapxtista/tire-pressure-monitor.git" target="_blank" rel="noopener noreferrer">Aferidor Inteligente de Pneus</a></p>            
             <p><strong>Curso:</strong> Sistemas Embarcados</p>
             <p><strong>Instituição:</strong> Fatec - Faculdade de Tecnologia Dep. Ary Fossen</p>
             <p><strong>Ano:</strong> 2025</p>
